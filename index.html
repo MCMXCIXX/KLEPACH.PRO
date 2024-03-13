@@ -3,11 +3,88 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="styles/style.css" />
-		<link rel="stylesheet" href="styles/normalize.css" />
+		<link rel="stylesheet" href="/styles/style.css" />
+		<link rel="stylesheet" href="/styles/normalize.css" />
 		<title>Klepach</title>
 	</head>
 	<body>
+		<div class="modal" id="call" data-target="call">
+			<div class="modal__box">
+				<div class="modal__box-inner">
+					<button id="close-modal-call" class="modal__close-btn modal__close">
+						<svg
+							width="28"
+							height="28"
+							viewBox="0 0 28 28"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M0.944926 27.0541C1.03338 27.1427 1.13842 27.2129 1.25404 27.2608C1.36966 27.3087 1.4936 27.3334 1.61876 27.3334C1.74393 27.3334 1.86786 27.3087 1.98348 27.2608C2.0991 27.2129 2.20415 27.1427 2.2926 27.0541L13.9978 15.3499L25.7078 27.0541C25.8866 27.2328 26.1289 27.3332 26.3817 27.3332C26.6344 27.3332 26.8768 27.2328 27.0555 27.0541C27.2342 26.8754 27.3346 26.633 27.3346 26.3803C27.3346 26.1276 27.2342 25.8853 27.0555 25.7066L15.3455 14.0024L27.0508 2.29339C27.2295 2.11469 27.3299 1.87233 27.3299 1.61961C27.3299 1.3669 27.2295 1.12453 27.0508 0.945836C26.872 0.767139 26.6297 0.666748 26.3769 0.666748C26.1242 0.666748 25.8818 0.767139 25.7031 0.945836L13.9978 12.6548L2.28784 0.950597C2.10564 0.79458 1.87127 0.713054 1.63157 0.722312C1.39187 0.73157 1.16449 0.830929 0.994867 1.00053C0.825246 1.17014 0.725878 1.3975 0.71662 1.63718C0.707361 1.87686 0.788894 2.11121 0.944926 2.29339L12.6502 14.0024L0.944926 25.7113C0.767536 25.8897 0.667969 26.1311 0.667969 26.3827C0.667969 26.6343 0.767536 26.8757 0.944926 27.0541Z"
+								fill="#122832"
+							/>
+						</svg>
+					</button>
+					<h2 class="modal__title">Оставить заявку</h2>
+					<form id="form" action="" class="modal__form">
+						<input
+							type="text"
+							class="modal__name modal__input"
+							placeholder="Имя"
+						/>
+						<input
+							type="number"
+							class="modal__tel modal__input"
+							placeholder="Телефон"
+						/>
+						<textarea
+							name=""
+							id=""
+							cols="30"
+							rows="10"
+							placeholder="Комментарий"
+							class="modal__coment modal__input"
+						></textarea>
+						<button class="btn modal__btn modal__close-btn" type="submit">
+							отправить
+						</button>
+						<p class="modal__footnote">
+							Нажимая на кнопку «Отправить», вы даете
+							<a href="#" class="modal__link"
+								>согласие на обработку персональных данных</a
+							>
+						</p>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="modal__video">
+			<button class="modal__close-btn modal__video-btn">
+				<svg
+					width="28"
+					height="28"
+					viewBox="0 0 28 28"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M0.944926 27.0541C1.03338 27.1427 1.13842 27.2129 1.25404 27.2608C1.36966 27.3087 1.4936 27.3334 1.61876 27.3334C1.74393 27.3334 1.86786 27.3087 1.98348 27.2608C2.0991 27.2129 2.20415 27.1427 2.2926 27.0541L13.9978 15.3499L25.7078 27.0541C25.8866 27.2328 26.1289 27.3332 26.3817 27.3332C26.6344 27.3332 26.8768 27.2328 27.0555 27.0541C27.2342 26.8754 27.3346 26.633 27.3346 26.3803C27.3346 26.1276 27.2342 25.8853 27.0555 25.7066L15.3455 14.0024L27.0508 2.29339C27.2295 2.11469 27.3299 1.87233 27.3299 1.61961C27.3299 1.3669 27.2295 1.12453 27.0508 0.945836C26.872 0.767139 26.6297 0.666748 26.3769 0.666748C26.1242 0.666748 25.8818 0.767139 25.7031 0.945836L13.9978 12.6548L2.28784 0.950597C2.10564 0.79458 1.87127 0.713054 1.63157 0.722312C1.39187 0.73157 1.16449 0.830929 0.994867 1.00053C0.825246 1.17014 0.725878 1.3975 0.71662 1.63718C0.707361 1.87686 0.788894 2.11121 0.944926 2.29339L12.6502 14.0024L0.944926 25.7113C0.767536 25.8897 0.667969 26.1311 0.667969 26.3827C0.667969 26.6343 0.767536 26.8757 0.944926 27.0541Z"
+						fill="#122832"
+					/>
+				</svg>
+			</button>
+			<div class="modal__video-box">
+				<div class="modal__video-inner">
+					<iframe
+						src="https://www.youtube.com/embed/mWr7eRGtYRM?si=n8kiu5maXBNI2ofY&amp;controls=0"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						allowfullscreen
+					></iframe>
+				</div>
+			</div>
+		</div>
 		<main class="main">
 			<section class="head-block">
 				<div class="container head-block__container">
@@ -16,7 +93,7 @@
 							<nav class="navigation">
 								<div class="logo head-block__logo">
 									<a href="index.html">
-										<img src="images/logo.svg" alt="Лого" />
+										<img src="/images/logo.svg" alt="Лого" />
 									</a>
 								</div>
 								<ul class="navigation__list">
@@ -51,7 +128,10 @@
 									></a>
 								</div>
 								<div class="navigation__social">
-									<a href="https://t.me/elmurodcoder" class="navigation__icon"
+									<a
+										href="https://t.me/elmurodcoder"
+										target="_blank"
+										class="navigation__icon"
 										><svg
 											width="20"
 											height="20"
@@ -103,7 +183,13 @@
 								<p class="head-block__subtitle">
 									Мы - Лидеры в своей нише. Ищем партнёра в твоём городе
 								</p>
-								<button class="head-block-btn btn">Перезвоните мне</button>
+								<button
+									class="head-block-btn btn open-modal-btn"
+									id="head-open-modal"
+									data-path="call"
+								>
+									Перезвоните мне
+								</button>
 								<div class="head-block__features">
 									<ul class="head-block__features-list">
 										<li class="head-block__features-item">
@@ -239,7 +325,7 @@
 								<a href="" class="product__link"
 									><div class="product__item-inner">
 										<div class="product__img">
-											<img src="images/пигмент.png" alt="пигмент" />
+											<img src="/images/пигмент.png" alt="пигмент" />
 										</div>
 									</div>
 									<p class="product__text">Пигменты KLEPACH.PRO</p>
@@ -249,7 +335,7 @@
 								<a href="" class="product__link"
 									><div class="product__item-inner">
 										<div class="product__img">
-											<img src="images/кисти.png" alt="кисти" />
+											<img src="/images/кисти.png" alt="кисти" />
 										</div>
 									</div>
 									<p class="product__text">Кисти KLEPACH.PRO</p>
@@ -259,7 +345,7 @@
 								<a href="" class="product__link"
 									><div class="product__item-inner">
 										<div class="product__img">
-											<img src="images/Тинт.png" alt="Тинты " />
+											<img src="/images/Тинт.png" alt="Тинты " />
 										</div>
 									</div>
 									<p class="product__text">Тинты KLEPACH.PRO</p>
@@ -269,7 +355,7 @@
 								<a href="" class="product__link"
 									><div class="product__item-inner">
 										<div class="product__img">
-											<img src="images/хайлайтер.png" alt="Хайлайтер " />
+											<img src="/images/хайлайтер.png" alt="Хайлайтер " />
 										</div>
 									</div>
 									<p class="product__text">Хайлайтер KLEPACH.PRO</p>
@@ -279,7 +365,7 @@
 								<a href="" class="product__link"
 									><div class="product__item-inner">
 										<div class="product__img">
-											<img src="images/праймер.png" alt="праймер" />
+											<img src="/images/праймер.png" alt="праймер" />
 										</div>
 									</div>
 									<p class="product__text">Праймер KLEPACH.PRO</p>
@@ -322,10 +408,10 @@
 						</div>
 						<div class="collections__images">
 							<div class="collections__img collections__img--one">
-								<img src="images/collections-one.jpg" alt="woman" />
+								<img src="/images/collections-one.jpg" alt="woman" />
 							</div>
 							<div class="collections__img collections__img--two">
-								<img src="images/collections-two.jpg" alt="woman" />
+								<img src="/images/collections-two.jpg" alt="woman" />
 							</div>
 						</div>
 					</div>
@@ -344,7 +430,7 @@
 							<li class="advantages__item">
 								<div class="advantages__img-wrapper">
 									<img
-										src="images/box.svg"
+										src="/images/box.svg"
 										alt="box"
 										class="advantages__icon"
 									/>
@@ -359,7 +445,7 @@
 							<li class="advantages__item">
 								<div class="advantages__img-wrapper">
 									<img
-										src="images/megaphone.svg"
+										src="/images/megaphone.svg"
 										alt="megaphone"
 										class="advantages__icon"
 									/>
@@ -374,7 +460,7 @@
 							<li class="advantages__item">
 								<div class="advantages__img-wrapper">
 									<img
-										src="images/notebook.svg"
+										src="/images/notebook.svg"
 										alt="notebook"
 										class="advantages__icon"
 									/>
@@ -412,7 +498,7 @@
 							<div class="reviews__item">
 								<div class="reviews__item-date">
 									<img
-										src="images/reviews-photo.jpg"
+										src="/images/reviews-photo.jpg"
 										alt="Магазин Beauty Expert"
 										class="reviews__item-img"
 									/>
@@ -420,16 +506,16 @@
 										<h3 class="reviews__item-title">Магазин Beauty Expert</h3>
 										<p class="reviews__item-name">Алексей Попов</p>
 										<div class="reviews__item-rating">
-											<img src="images/reviews-rating.svg" alt="звезда" /><img
-												src="images/reviews-rating.svg"
+											<img src="/images/reviews-rating.svg" alt="звезда" /><img
+												src="/images/reviews-rating.svg"
 												alt="звезда"
 											/><img
-												src="images/reviews-rating.svg"
+												src="/images/reviews-rating.svg"
 												alt="звезда"
 											/><img
-												src="images/reviews-rating.svg"
+												src="/images/reviews-rating.svg"
 												alt="звезда"
-											/><img src="images/reviews-rating.svg" alt="звезда" />
+											/><img src="/images/reviews-rating.svg" alt="звезда" />
 										</div>
 										<p class="reviews__item-data">22.02.2024</p>
 									</div>
@@ -444,8 +530,8 @@
 										финиши и эффекты, что позволяет где-то делать акценты,
 										где-то украшать весь макияж сразу и так далее.
 									</p>
-									<button class="reviews__video-btn">
-										<img src="images/reviews-play-btn.svg" alt="Кнопка Play" />
+									<button class="reviews__video-btn open-modal-video-btn">
+										<img src="/images/reviews-play-btn.svg" alt="Кнопка Play" />
 										Смотреть видеоотзыв
 									</button>
 								</div>
@@ -453,7 +539,7 @@
 							<div class="reviews__item">
 								<div class="reviews__item-date">
 									<img
-										src="images/reviews-photo.jpg"
+										src="/images/reviews-photo.jpg"
 										alt="Магазин Beauty Expert"
 										class="reviews__item-img"
 									/>
@@ -461,16 +547,16 @@
 										<h3 class="reviews__item-title">Lorem, ipsum dolor.</h3>
 										<p class="reviews__item-name">Lorem, ipsum.</p>
 										<div class="reviews__item-rating">
-											<img src="images/reviews-rating.svg" alt="звезда" /><img
-												src="images/reviews-rating.svg"
+											<img src="/images/reviews-rating.svg" alt="звезда" /><img
+												src="/images/reviews-rating.svg"
 												alt="звезда"
 											/><img
-												src="images/reviews-rating.svg"
+												src="/images/reviews-rating.svg"
 												alt="звезда"
 											/><img
-												src="images/reviews-rating.svg"
+												src="/images/reviews-rating.svg"
 												alt="звезда"
-											/><img src="images/reviews-rating.svg" alt="звезда" />
+											/><img src="/images/reviews-rating.svg" alt="звезда" />
 										</div>
 										<p class="reviews__item-data">22.02.2024</p>
 									</div>
@@ -485,8 +571,8 @@
 										magnam dicta laudantium. Sapiente dolor nesciunt minima ut,
 										quae sed sit?
 									</p>
-									<button class="reviews__video-btn">
-										<img src="images/reviews-play-btn.svg" alt="Кнопка Play" />
+									<button class="reviews__video-btn open-modal-video-btn">
+										<img src="/images/reviews-play-btn.svg" alt="Кнопка Play" />
 										Смотреть видеоотзыв
 									</button>
 								</div>
@@ -494,7 +580,7 @@
 							<div class="reviews__item">
 								<div class="reviews__item-date">
 									<img
-										src="images/reviews-photo.jpg"
+										src="/images/reviews-photo.jpg"
 										alt="Магазин Beauty Expert"
 										class="reviews__item-img"
 									/>
@@ -502,16 +588,16 @@
 										<h3 class="reviews__item-title">Lorem, ipsum dolor.</h3>
 										<p class="reviews__item-name">Lorem, ipsum.</p>
 										<div class="reviews__item-rating">
-											<img src="images/reviews-rating.svg" alt="звезда" /><img
-												src="images/reviews-rating.svg"
+											<img src="/images/reviews-rating.svg" alt="звезда" /><img
+												src="/images/reviews-rating.svg"
 												alt="звезда"
 											/><img
-												src="images/reviews-rating.svg"
+												src="/images/reviews-rating.svg"
 												alt="звезда"
 											/><img
-												src="images/reviews-rating.svg"
+												src="/images/reviews-rating.svg"
 												alt="звезда"
-											/><img src="images/reviews-rating.svg" alt="звезда" />
+											/><img src="/images/reviews-rating.svg" alt="звезда" />
 										</div>
 										<p class="reviews__item-data">22.02.2024</p>
 									</div>
@@ -519,12 +605,14 @@
 								<div class="reviews__item-content">
 									<p class="reviews__text">
 										Lorem ipsum dolor sit amet consectetur adipisicing elit.
-										Sed, eum.
+										Voluptates modi voluptatibus inventore alias. Ratione
+										voluptatum at recusandae nihil facere nemo tempora quisquam
+										officia voluptatem quam.
 									</p>
-									<!-- <button class="reviews__video-btn">
-										<img src="images/reviews-play-btn.svg" alt="Кнопка Play" />
+									<button class="reviews__video-btn open-modal-video-btn">
+										<img src="/images/reviews-play-btn.svg" alt="Кнопка Play" />
 										Смотреть видеоотзыв
-									</button> -->
+									</button>
 								</div>
 							</div>
 						</div>
@@ -542,7 +630,7 @@
 								KLEPACH.PRO уже более 7 лет завоевывают доверие ТОП - визажистов
 								по всей России.
 							</p>
-							<button class="btn achievements__btn">
+							<button class="btn achievements__btn open-modal-btn">
 								Получить индивидуальное предложение
 							</button>
 						</div>
@@ -593,7 +681,7 @@
 							<li class="partners__item">
 								<a href="">
 									<img
-										src="images/letual.png"
+										src="/images/letual.png"
 										alt="Лэтуаль"
 										class="partners__img"
 									/>
@@ -602,7 +690,7 @@
 							<li class="partners__item">
 								<a href="#"
 									><img
-										src="images/gold.png"
+										src="/images/gold.png"
 										alt="Золотое Яблоко"
 										class="partners__img"
 								/></a>
@@ -610,7 +698,7 @@
 							<li class="partners__item">
 								<a href="#"
 									><img
-										src="images/market.png"
+										src="/images/market.png"
 										alt="Бессовестно Талантливый"
 										class="partners__img"
 								/></a>
@@ -623,7 +711,7 @@
 				<div class="footer__container">
 					<div class="logo footer__logo">
 						<a href="index.html">
-							<img src="images/logo.svg" alt="Лого" />
+							<img src="/images/logo.svg" alt="Лого" />
 						</a>
 					</div>
 					<nav class="footer__nav">
@@ -643,20 +731,20 @@
 							<li class="footer__contacts-item">
 								<a href="mailto:opt@klepachpro.ru"
 									><img
-										src="images/mail.svg"
+										src="/images/mail.svg"
 										alt="Почта"
 									/>opt@klepachpro.ru</a
 								>
 							</li>
 							<li class="footer__contacts-item">
-								<a href="tel:+7 (938) 463 97 02"
-									><img src="images/tel.svg" alt="Телефон" />+7 (938) 463 97
+								<a href="tel:+7(938)4639702"
+									><img src="/images/tel.svg" alt="Телефон" />+7 (938) 463 97
 									02</a
 								>
 							</li>
 							<li class="footer__contacts-item">
 								<a href="https://yandex.ru/maps/-/CDFkjB5d" target="_blank"
-									><img src="images/map.svg" alt="Карта" />г. Сочи, ул.
+									><img src="/images/map.svg" alt="Карта" />г. Сочи, ул.
 									Горького, д. 26</a
 								>
 							</li>
@@ -664,10 +752,10 @@
 					</div>
 					<div class="footer__social">
 						<a href="" class="footer__social-link"
-							><img src="images/whatsapp.svg" alt="whatsapp"
+							><img src="/images/whatsapp.svg" alt="whatsapp"
 						/></a>
 						<a href="" class="footer__social-link"
-							><img src="images/telegram.svg" alt="telegram"
+							><img src="/images/telegram.svg" alt="telegram"
 						/></a>
 					</div>
 					<div class="footer__copy">
@@ -682,6 +770,7 @@
 				</div>
 			</footer>
 		</main>
-		<script defer src="script.js"></script>
+
+		<script defer src="/script.js"></script>
 	</body>
 </html>

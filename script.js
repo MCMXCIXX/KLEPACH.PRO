@@ -35,3 +35,37 @@ controlls.forEach(e => {
 })
 
 show(itemIndex)
+
+const btns = document.querySelectorAll('.open-modal-btn')
+const btnsVideo = document.querySelectorAll('.open-modal-video-btn')
+const btnsClose = document.querySelectorAll('.modal__close-btn')
+
+const modal = document.querySelector('.modal')
+const modalVideo = document.querySelector('.modal__video')
+
+// btns.addEventListener('click', function () {
+// 	document.getElementById('call').classList.add('open')
+// })
+// document
+// 	.getElementById('close-modal-call')
+// 	.addEventListener('click', function () {
+// 		document.getElementById('call').classList.remove('open')
+// 	})
+btnsClose.forEach(el => {
+	el.addEventListener('click', e => {
+		modal.classList.remove('open')
+		modalVideo.classList.remove('open')
+		document.getElementById('form').reset()
+	})
+})
+
+btns.forEach(el => {
+	el.addEventListener('click', e => {
+		modal.classList.add('open')
+	})
+})
+btnsVideo.forEach(el => {
+	el.addEventListener('click', e => {
+		modalVideo.classList.add('open')
+	})
+})

@@ -71,6 +71,7 @@ button {
   cursor: pointer;
   background: transparent;
   border: none;
+  color: inherit;
 }
 
 .container {
@@ -85,6 +86,7 @@ button {
   background-position: -50px 0;
   background-repeat: no-repeat;
   margin-bottom: 140px;
+  overflow-y: hidden;
 }
 
 .head-block__content {
@@ -825,6 +827,146 @@ button {
   gap: 43px;
 }
 
+.modal__video {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  overflow-y: auto;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.modal__video-box {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  box-shadow: 2px 2px 4px 0 rgba(189, 191, 193, 0.25);
+  transition: transform 0.6s ease;
+  transform: scale(0);
+}
+
+.modal__video.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__video.open .modal__video-box {
+  transform: scale(1);
+}
+
+.modal__video-inner iframe {
+  width: 1069px;
+  height: 772px;
+}
+
+.modal__video-btn {
+  position: absolute;
+  right: 80px;
+  top: 40px;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  background: rgba(31, 31, 31, 0.5);
+  overflow-y: auto;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.modal.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal.open .modal__box {
+  transform: scale(1);
+}
+
+.modal__box {
+  position: relative;
+  max-width: 796px;
+  padding: 45px;
+  z-index: 1;
+  background: #fff;
+  box-shadow: 2px 2px 4px 0 rgba(189, 191, 193, 0.25);
+  transition: transform 0.6s ease;
+  transform: scale(0);
+}
+
+.modal__close {
+  position: absolute;
+  right: 40px;
+}
+
+.modal__title {
+  font-weight: 400;
+  font-size: 38px;
+  font-family: "Minion Pro";
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.modal__input {
+  display: inline-block;
+  border-radius: 50px;
+  border: 1px solid #797979;
+  height: 54px;
+  width: 100%;
+  font-size: 18px;
+  color: #797979;
+  padding-left: 24px;
+}
+
+.modal__coment {
+  padding-top: 16px;
+  height: 145px;
+  display: flex;
+}
+
+.modal__btn {
+  margin-top: 32px;
+  width: 100%;
+}
+
+.modal__footnote {
+  font-weight: 500;
+  font-size: 16px;
+  color: #797979;
+}
+
+.modal__link {
+  text-decoration: underline;
+}
+
+video {
+  width: 100px;
+  height: 100px;
+}
+
 @media (max-width: 1820px) {
   .reviews__title-wrapper {
     display: flex;
@@ -999,17 +1141,20 @@ button {
     gap: 42px;
   }
   .reviews__inner {
-    min-height: 500px;
+    min-height: 435px;
   }
   .achievements__list {
     display: grid;
+  }
+  .reviews__inner {
+    min-height: 550px;
   }
 }
 @media (max-width: 778px) {
   .navigation__list {
     display: none;
     position: absolute;
-    top: 100px;
+    top: 75px;
     left: 0;
     right: 0;
     margin: 0;
@@ -1249,5 +1394,43 @@ button {
   .footer__copy {
     flex-direction: column;
     gap: 10px;
+  }
+  .modal__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .modal__close {
+    right: 21px;
+  }
+  .modal__close svg {
+    width: 20px;
+  }
+  .modal__input {
+    height: 44px;
+    border-radius: 32px;
+  }
+  .modal__coment {
+    height: 90px;
+  }
+  .modal__box {
+    padding: 16px;
+  }
+  .modal__footnote {
+    font-size: 14px;
+  }
+  .modal__form {
+    padding: 0 16px;
+  }
+  .modal__box {
+    position: absolute;
+    bottom: 0;
+  }
+  .modal__video-inner iframe {
+    width: 375px;
+    height: 254px;
+  }
+  .modal__video-btn {
+    right: 16px;
+    top: 24px;
   }
 }/*# sourceMappingURL=style.css.map */

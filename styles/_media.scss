@@ -176,10 +176,13 @@
 		gap: 42px;
 	}
 	.reviews__inner {
-		min-height: 500px;
+		min-height: 435px;
 	}
 	.achievements__list {
 		display: grid;
+	}
+	.reviews__inner {
+		min-height: 550px;
 	}
 }
 
@@ -187,7 +190,7 @@
 	.navigation__list {
 		display: none;
 		position: absolute;
-		top: 100px;
+		top: 75px;
 		left: 0;
 		right: 0;
 		margin: 0;
@@ -429,5 +432,43 @@
 	.footer__copy {
 		flex-direction: column;
 		gap: 10px;
+	}
+	.modal__title {
+		font-size: 24px;
+		margin-bottom: 20px;
+	}
+	.modal__close {
+		right: 21px;
+	}
+	.modal__close svg {
+		width: 20px;
+	}
+	.modal__input {
+		height: 44px;
+		border-radius: 32px;
+	}
+	.modal__coment {
+		height: 90px;
+	}
+	.modal__box {
+		padding: 16px;
+	}
+	.modal__footnote {
+		font-size: 14px;
+	}
+	.modal__form {
+		padding: 0 16px;
+	}
+	.modal__box {
+		position: absolute;
+		bottom: 0;
+	}
+	.modal__video-inner iframe {
+		width: 375px;
+		height: 254px;
+	}
+	.modal__video-btn {
+		right: 16px;
+		top: 24px;
 	}
 }
