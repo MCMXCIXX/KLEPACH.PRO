@@ -1,0 +1,726 @@
+@import '_font-face.scss';
+@import '_vars.scss';
+
+html {
+	scroll-behavior: smooth;
+}
+main {
+	max-width: 1920px;
+	margin: 0 auto;
+}
+body {
+	font-family: Gilroy, sans-serif;
+	font-weight: normal;
+	color: $main-color;
+	font-size: 20px;
+}
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+button {
+	cursor: pointer;
+	background: transparent;
+	border: none;
+}
+.container {
+	max-width: 1650px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.head-block {
+	overflow-x: hidden;
+	background-image: url(../images/head-block-bg.png);
+	background-position: -50px 0;
+	background-repeat: no-repeat;
+	margin-bottom: 140px;
+}
+.head-block__content {
+	padding: 22px 0 94px 0;
+}
+.head-block__img {
+	position: absolute;
+	background-image: url(../images/head-block-inner-bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	width: 975px;
+	height: 1117px;
+	right: -135px;
+}
+.head-block__inner {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.navigation {
+	display: flex;
+	align-items: center;
+}
+.logo {
+}
+.navigation__list {
+	display: flex;
+	gap: 48px;
+	margin-left: -8px;
+}
+.navigation__item {
+	transition: opacity 0.4s ease;
+}
+.navigation__item:hover {
+	opacity: 0.8;
+}
+.navigation__social {
+	margin-left: 32px;
+}
+.navigation__social svg {
+	width: 32px;
+	height: 32px;
+}
+.navigation__icon {
+}
+
+.head-block__title {
+	margin: 0;
+	font-family: 'Minion Pro';
+	font-weight: 400;
+	font-size: 76px;
+	margin-top: 130px;
+	line-height: 1.1;
+}
+.head-block__title span {
+	display: block;
+}
+.head-block__subtitle {
+	max-width: 362px;
+	font-weight: 400;
+	font-size: 24px;
+}
+.head-block-btn {
+}
+.btn {
+	box-sizing: border-box;
+	border: none;
+	border-radius: 100px;
+	padding: 20px 64px;
+	width: 310px;
+	height: 62px;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), inset 2px 2px 16px 0 #a260a9;
+	background: linear-gradient(
+			83.54deg,
+			rgb(10, 186, 181) 0.167%,
+			rgb(164, 161, 212) 67.39%,
+			rgb(246, 204, 226) 105.792%
+		),
+		rgb(11, 11, 10);
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-top: 64px;
+	transition: transform 0.3s ease;
+}
+.btn:hover {
+	transform: scale(1.04);
+}
+.head-block__features {
+	max-width: 695px;
+	margin-left: 5px;
+	border-top: 1px solid rgb(19, 41, 47);
+	padding-top: 32px;
+	margin-top: 221px;
+}
+.head-block__features-list {
+	display: flex;
+	gap: 48px;
+}
+.head-block__features-item {
+	display: flex;
+	gap: 10px;
+}
+.head-block__features-icon {
+	position: relative;
+}
+.head-block__features-icon::after {
+	content: '';
+	display: flex;
+	width: 80px;
+	height: 80px;
+	// position: absolute;
+	background-image: url(../images/head-block-icon-bg.png);
+	background-size: cover;
+	position: absolute;
+	top: -24px;
+	left: -30px;
+}
+.head-block__features-icon svg {
+	width: 32px;
+	height: 32px;
+}
+.head-block__features-text {
+	max-width: 280px;
+}
+.head-block__img {
+}
+.navigation__phone,
+.navigation__burger {
+	display: none;
+}
+.head-block__text-wrapper {
+	padding: 0 15px;
+}
+
+.about {
+	padding-bottom: 180px;
+	position: relative;
+}
+.about::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 1500px;
+	top: -250px;
+	z-index: -11;
+	background-image: url(../images/about-bg.png);
+	background-repeat: no-repeat;
+	background-position: 9% 0;
+}
+.about__inner {
+	display: flex;
+	gap: 112px;
+	align-items: center;
+}
+.about__images {
+	display: flex;
+	gap: 28px;
+}
+.about__img {
+	display: flex;
+	border-radius: 400px;
+	width: 409px;
+	height: 685px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.about__img--one {
+	background-image: url(../images/about-img1.png);
+}
+.about__img--two {
+	background-image: url(../images/about-img2.png);
+}
+.about__text {
+}
+.about__title {
+	font-family: 'Minion Pro';
+	font-size: 56px;
+	margin-bottom: 0;
+	margin-bottom: 24px;
+	font-weight: 400;
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
+	white-space: nowrap;
+}
+.about__title-line {
+	display: inline-block;
+	height: 1px;
+	width: 100%;
+	background: $main-color;
+	margin-left: 40px;
+}
+
+.about__descr {
+	font-weight: 500;
+	margin-bottom: 48px;
+}
+.about__descr span {
+	display: block;
+}
+
+.about__btn {
+	display: flex;
+	width: 472px;
+	height: 72px;
+	box-sizing: border-box;
+	cursor: pointer;
+	font-weight: 600;
+	margin-bottom: 24px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+.about__download {
+	font-weight: 600;
+	transition: opacity 0.4s ease;
+}
+.about__download:hover {
+	opacity: 0.8;
+}
+.product {
+	margin-bottom: 180px;
+}
+
+.product__inner {
+}
+.product__list {
+	display: flex;
+}
+.product__item:nth-child(even) .product__img {
+	width: 390px;
+	height: 390px;
+	margin: 0 -1px 0 -1px;
+}
+.product__item {
+}
+.product__link {
+}
+.product__item-inner {
+}
+.product__img {
+	width: 286px;
+	height: 286px;
+	border: 1px solid #13292f;
+}
+.product__img img {
+	width: 100%;
+}
+.product__text {
+	margin: 0;
+	font-weight: 400;
+	font-size: 16px;
+	color: #878787;
+	padding: 12px;
+}
+
+.collections {
+	margin-bottom: 260px;
+}
+.collections__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 25px;
+}
+.collections__text {
+	max-width: 563px;
+	flex-grow: 1;
+}
+.collections__title {
+	text-wrap: nowrap;
+}
+.collections__title-inner {
+}
+.collections__title-line {
+	display: inline-block;
+	height: 1px;
+	width: 100%;
+	background: $main-color;
+	margin-left: 40px;
+}
+.collections__title {
+	font-family: 'Minion Pro';
+	font-size: 56px;
+	margin: 0;
+	margin-bottom: 64px;
+	font-weight: 400;
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
+	white-space: nowrap;
+}
+
+.collections__list {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.collections__item {
+	position: relative;
+	font-weight: 500;
+	padding: 10px 0;
+	border-bottom: 1px solid #13292f;
+}
+.collections__item a {
+	display: flex;
+	justify-content: space-between;
+	transition: opacity 0.3s ease;
+}
+.collections__item a:hover {
+	opacity: 0.8;
+}
+.collections__item a::after {
+	content: '';
+	display: inline-block;
+	width: 23px;
+	height: 23px;
+	background-image: url(../images/collections-arrow.svg);
+}
+.collections__link {
+}
+.collections__images {
+	display: flex;
+	gap: 28px;
+}
+.collections__images img {
+	width: 100%;
+}
+.collections__img {
+	max-height: 685px;
+}
+.collections__img--one {
+	max-width: 530px;
+}
+.collections__img--two {
+	max-width: 434px;
+}
+.advantages {
+	margin-bottom: 260px;
+}
+.advantages__inner {
+}
+.advantages__title {
+	font-family: 'Minion Pro';
+	font-weight: 400;
+	font-size: 56px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 60px;
+}
+.advantages__title-line {
+	display: inline-block;
+	height: 1px;
+	background: $main-color;
+	width: 100%;
+	max-width: 426px;
+}
+.advantages__title-inner {
+	text-wrap: nowrap;
+	margin: 0 20px;
+}
+.advantages__list {
+	display: flex;
+	justify-content: space-between;
+}
+.advantages__item {
+	text-align: center;
+}
+.advantages__item:nth-child(2) {
+	padding: 0 60px;
+	border-left: 1px solid $main-color;
+	border-right: 1px solid $main-color;
+}
+.advantages__icon {
+	// position: relative;
+}
+.advantages__img-wrapper {
+	position: relative;
+}
+.advantages__img-wrapper::before {
+	display: flex;
+	position: absolute;
+	content: '';
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	background-image: url(../images/head-block-icon-bg.png);
+	background-size: cover;
+	justify-content: center;
+	left: center;
+	transform: translate(-20px, -20px);
+}
+.advantages__item-title {
+	font-size: 32px;
+	font-family: 'Minion Pro';
+	font-weight: 400;
+}
+.advantages__discr {
+	font-weight: 400;
+	font-size: 20px;
+	max-width: 470px;
+}
+.reviews {
+	margin-bottom: 228px;
+}
+.reviews__inner {
+	min-height: 300px;
+}
+.reviews__title-wrapper {
+	position: relative;
+}
+
+.reviews__controlls {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	z-index: 1;
+	top: 207px;
+}
+.reviews__controlls--prev {
+	background-image: url(../images/arrow-prev.svg);
+	left: -72px;
+}
+.reviews__controlls--next {
+	background-image: url(../images/arrow-next.svg);
+	right: -72px;
+}
+.reviews__title {
+	font-family: 'Minion Pro';
+	font-weight: 400;
+	font-size: 56px;
+	margin-bottom: 68px;
+	display: flex;
+	align-items: center;
+}
+.reviews__title-inner {
+	font-family: 'Minion Pro';
+	font-weight: 400;
+	font-size: 56px;
+}
+.reviews__title-line {
+	display: inline-block;
+	width: 100%;
+	height: 1px;
+	background: $main-color;
+	margin: 0 20px 0 16px;
+}
+.reviews__item-wrapper {
+	position: relative;
+}
+.reviews__item {
+	display: flex;
+	align-items: center;
+	gap: 137px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.4s ease;
+}
+.reviews__item.active {
+	opacity: 1;
+}
+.reviews__item-date {
+	display: flex;
+	gap: 64px;
+}
+.reviews__item-img {
+	width: 141px;
+	height: 143px;
+}
+.reviews__item-info {
+	display: flex;
+	flex-direction: column;
+	min-width: 200px;
+}
+.reviews__item-title {
+	font-weight: 600;
+	font-size: 20px;
+	margin: 0 0 4px 0;
+	flex-grow: 1;
+}
+.reviews__item-name {
+	font-weight: 400;
+	font-size: 16px;
+	margin: 0;
+}
+.reviews__item-rating {
+	margin: 16px 0;
+	width: 120px;
+	display: flex;
+	justify-content: space-between;
+}
+.reviews__item-data {
+	font-weight: 400;
+	font-size: 14px;
+	margin: 0;
+}
+.reviews__item-content {
+	padding: 0 0 0 24px;
+	border-left: 1px solid $main-color;
+}
+.reviews__text {
+	font-weight: 400;
+	font-size: 20px;
+	max-width: 1076px;
+}
+.reviews__video-btn {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-weight: 600;
+	font-size: 20px;
+}
+.achievements {
+	margin-bottom: 180px;
+}
+
+.achievements__inner {
+	display: flex;
+	justify-content: space-between;
+}
+.achievements__content {
+	max-width: 671px;
+}
+.achievements__text {
+	font-size: 20px;
+	margin-bottom: 48px;
+}
+.achievements__title {
+	font-family: 'Minion Pro';
+	font-weight: 400;
+	font-size: 56px;
+	margin: 0;
+}
+
+.achievements__btn {
+	width: 574px;
+	height: 62px;
+	font-weight: 600;
+	font-size: 20px;
+	margin-top: 21px;
+}
+.achievements__list {
+	display: grid;
+	gap: 72px;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	max-width: 540px;
+	margin-right: 131px;
+}
+.achievements__item {
+	font-weight: 400;
+	font-size: 18px;
+	padding-left: 24px;
+	border-left: 1px solid $main-color;
+}
+.achievements__item-head {
+}
+.achievements__item-head--strong {
+	font-family: 'Minion Pro';
+	font-size: 56px;
+}
+.achievements__item-descr {
+	max-width: 198px;
+}
+.partners__title {
+	font-family: 'Minion Pro';
+	font-weight: 400;
+	font-size: 56px;
+	margin-bottom: 68px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 60px;
+}
+.partners__title-inner {
+	font-family: 'Minion Pro';
+	font-weight: 400;
+	font-size: 56px;
+	text-wrap: nowrap;
+}
+.partners__title-line {
+	display: inline-block;
+	width: 100%;
+	height: 1px;
+	background: $main-color;
+	margin: 0 20px 0 16px;
+}
+.partners {
+	margin-bottom: 180px;
+}
+.partners__inner {
+}
+.partners__title-line {
+}
+.partners__title-inner {
+}
+.partners__list {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 75px;
+}
+.partners__item {
+	display: flex;
+	min-height: 96px;
+	align-items: center;
+	margin: 0 49px;
+}
+.partners__img {
+	width: 100%;
+}
+.partners__title {
+	margin: 0 0 24px 0;
+}
+.footer {
+}
+.footer__container {
+	max-width: 1270px;
+	margin: 0 auto;
+	padding: 0 15px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 55px;
+}
+.logo {
+}
+.footer__logo {
+	margin-top: -10px;
+}
+.footer__nav {
+}
+.footer__nav-list {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+.footer__nav-item {
+	font-weight: 400;
+	font-size: 18px;
+}
+.footer__contacts {
+}
+.footer__contacts-list {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+.footer__contacts-item a {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+.footer__social {
+	display: flex;
+	gap: 8px;
+}
+.footer__social-link {
+}
+.footer__copy {
+	width: 100%;
+	font-weight: 400;
+	font-size: 12px;
+	color: #989898;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 37px;
+}
+.footer__copy-text {
+	margin: 0;
+}
+.footer__documents {
+	text-decoration: underline;
+	display: flex;
+	gap: 43px;
+}
+
+@import '_media.scss';

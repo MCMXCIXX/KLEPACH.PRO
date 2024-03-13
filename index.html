@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/styles/style.css" />
+		<link rel="stylesheet" href="/styles/normalize.css" />
+		<title>Klepach</title>
+	</head>
+	<body>
+		<main class="main">
+			<section class="head-block">
+				<div class="container head-block__container">
+					<div class="head-block__inner">
+						<div class="head-block__content">
+							<nav class="navigation">
+								<div class="logo head-block__logo">
+									<a href="index.html">
+										<img src="/images/logo.svg" alt="Лого" />
+									</a>
+								</div>
+								<ul class="navigation__list">
+									<li class="navigation__item"><a href="#about">О нас</a></li>
+									<li class="navigation__item">
+										<a href="#advantages">Преимущества</a>
+									</li>
+									<li class="navigation__item">
+										<a href="#partners">Партнеры</a>
+									</li>
+								</ul>
+								<div class="navigation__phone">
+									<a href="tel:89999999999"
+										><svg
+											width="20"
+											height="20"
+											viewBox="0 0 20 20"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<g clip-path="url(#clip0_190_6865)">
+												<path
+													d="M18.4743 1.51662L17.5993 0.758282C17.3597 0.518508 17.0752 0.328299 16.7621 0.198524C16.4489 0.0687491 16.1133 0.00195313 15.7743 0.00195312C15.4353 0.00195313 15.0997 0.0687491 14.7865 0.198524C14.4734 0.328299 14.1889 0.518508 13.9493 0.758282C13.9243 0.783282 12.3826 2.79162 12.3826 2.79162C11.9253 3.27272 11.6703 3.91115 11.6703 4.57495C11.6703 5.23875 11.9253 5.87718 12.3826 6.35828L13.3493 7.57495C12.1326 10.3333 10.241 12.2333 7.5743 13.3666L6.35764 12.3916C5.87849 11.9305 5.23932 11.6728 4.5743 11.6728C3.90928 11.6728 3.27012 11.9305 2.79097 12.3916C2.79097 12.3916 0.782635 13.9333 0.757635 13.9583C-0.250699 14.9666 -0.250699 16.5999 0.715968 17.5666L1.5493 18.5249C2.50763 19.4833 3.7993 20.0083 5.1993 20.0083C11.566 20.0083 19.9993 11.5666 19.9993 5.20828C19.9993 3.81662 19.4743 2.51662 18.4743 1.52495V1.51662ZM5.1993 18.3333C4.2493 18.3333 3.3743 17.9833 2.7743 17.3749L1.94097 16.4166C1.77582 16.2508 1.68037 16.028 1.67417 15.7941C1.66797 15.5601 1.7515 15.3326 1.90763 15.1583C1.90763 15.1583 3.8993 13.6249 3.9243 13.5999C4.26597 13.2583 4.86597 13.2583 5.21597 13.5999C5.24097 13.6249 6.91597 14.9666 6.91597 14.9666C7.1493 15.1499 7.45763 15.1999 7.73263 15.0916C11.1826 13.7749 13.6576 11.3083 15.0826 7.74995C15.191 7.47495 15.1493 7.15828 14.9576 6.91662C14.9576 6.91662 13.616 5.23328 13.5993 5.21662C13.241 4.85828 13.241 4.28328 13.5993 3.92495C13.6243 3.89995 15.1576 1.90828 15.1576 1.90828C15.516 1.58328 16.0743 1.59162 16.4576 1.97495L17.3326 2.73328C17.9743 3.37495 18.3326 4.24995 18.3326 5.19995C18.3326 10.9999 10.191 18.3333 5.1993 18.3333Z"
+													fill="#13292F"
+												/>
+											</g>
+											<defs>
+												<clipPath id="clip0_190_6865">
+													<rect width="20" height="20" fill="white" />
+												</clipPath>
+											</defs></svg
+									></a>
+								</div>
+								<div class="navigation__social">
+									<a href="https://t.me/elmurodcoder" class="navigation__icon"
+										><svg
+											width="20"
+											height="20"
+											viewBox="0 0 20 20"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M10 0C4.47715 0 0 4.47715 0 10C0 15.5229 4.47715 20 10 20C15.5229 20 20 15.5229 20 10C20 4.47715 15.5229 0 10 0ZM15.1976 6.32563L13.4215 14.8047C13.4 14.9072 13.3531 15.0028 13.2851 15.0824C13.2171 15.1621 13.1301 15.2235 13.0322 15.2608C12.9343 15.2981 12.8285 15.3102 12.7247 15.296C12.6209 15.2817 12.5223 15.2417 12.438 15.1794L9.85461 13.2708L8.28945 14.7473C8.26897 14.7667 8.24483 14.7817 8.21846 14.7916C8.1921 14.8015 8.16402 14.8061 8.13587 14.805C8.10773 14.8039 8.08008 14.7973 8.05453 14.7854C8.02899 14.7735 8.00607 14.7567 7.98711 14.7359L7.95348 14.6989L8.22543 12.0671L13.1271 7.58852C13.1514 7.5664 13.1665 7.53601 13.1694 7.50333C13.1723 7.47065 13.1629 7.43806 13.143 7.41199C13.1231 7.38591 13.0941 7.36825 13.0618 7.36248C13.0295 7.35671 12.9962 7.36325 12.9685 7.38082L6.6998 11.3484L4 10.4417C3.92821 10.4176 3.86565 10.3718 3.82089 10.3107C3.77612 10.2497 3.75136 10.1762 3.74999 10.1005C3.74862 10.0248 3.77071 9.9505 3.81324 9.88784C3.85576 9.82517 3.91663 9.7772 3.9875 9.75051L14.5508 5.77125C14.6323 5.74059 14.7205 5.73238 14.8062 5.74748C14.892 5.76258 14.9721 5.80043 15.0382 5.85709C15.1043 5.91375 15.154 5.98712 15.182 6.06954C15.2101 6.15197 15.2154 6.24041 15.1976 6.32563Z"
+												fill="#109FCC"
+											/></svg
+									></a>
+								</div>
+								<div class="navigation__burger" id="head-burger">
+									<button>
+										<svg
+											width="20"
+											height="20"
+											viewBox="0 0 20 20"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M0 3.95207C0 3.42625 0.333011 3 0.743802 3H19.2562C19.667 3 20 3.42625 20 3.95207C20 4.47788 19.667 4.90413 19.2562 4.90413H0.743802C0.333011 4.90413 0 4.47788 0 3.95207Z"
+												fill="#13292F"
+											/>
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M0 10.2131C0 9.68724 0.333011 9.26099 0.743802 9.26099H19.2562C19.667 9.26099 20 9.68724 20 10.2131C20 10.7389 19.667 11.1651 19.2562 11.1651H0.743802C0.333011 11.1651 0 10.7389 0 10.2131Z"
+												fill="#13292F"
+											/>
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M0 16.4743C0 15.9485 0.333011 15.5222 0.743802 15.5222H19.2562C19.667 15.5222 20 15.9485 20 16.4743C20 17.0001 19.667 17.4263 19.2562 17.4263H0.743802C0.333011 17.4263 0 17.0001 0 16.4743Z"
+												fill="#13292F"
+											/>
+										</svg>
+									</button>
+								</div>
+							</nav>
+							<div class="head-block__text-wrapper">
+								<h1 class="head-block__title">
+									Профессиональная <span>косметика</span> и кисти для макияжа
+								</h1>
+								<p class="head-block__subtitle">
+									Мы - Лидеры в своей нише. Ищем партнёра в твоём городе
+								</p>
+								<button class="head-block-btn btn">Перезвоните мне</button>
+								<div class="head-block__features">
+									<ul class="head-block__features-list">
+										<li class="head-block__features-item">
+											<div class="head-block__features-icon">
+												<svg
+													width="32"
+													height="32"
+													viewBox="0 0 32 32"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path
+														d="M16 29.5755C15.8574 29.5755 15.7207 29.5124 15.6295 29.4029L0.114394 10.9786C-0.0310609 10.806 -0.0388185 10.5558 0.0969391 10.3755L5.91512 2.61789C6.00627 2.49571 6.15076 2.42395 6.303 2.42395H25.6969C25.8492 2.42395 25.9937 2.49571 26.0848 2.61789L31.903 10.3755C32.0388 10.5558 32.031 10.806 31.8855 10.9786L16.3704 29.4029C16.2792 29.5124 16.1425 29.5755 16 29.5755ZM1.10445 10.6489L16 28.3381L30.8955 10.6489L25.4545 3.39365H6.54542L1.10445 10.6489Z"
+														fill="#13292F"
+													/>
+													<path
+														d="M31.5152 11.1515H0.484848C0.217212 11.1515 0 10.9352 0 10.6666C0 10.398 0.217212 10.1818 0.484848 10.1818H31.5152C31.7828 10.1818 32 10.399 32 10.6666C32 10.9342 31.7828 11.1515 31.5152 11.1515Z"
+														fill="#13292F"
+													/>
+													<path
+														d="M16.0002 29.5757C15.9517 29.5757 15.9023 29.5689 15.8548 29.5534C15.5988 29.4729 15.4572 29.2005 15.5386 28.9454L21.3568 10.5212C21.4373 10.2662 21.7117 10.1226 21.9648 10.2051C22.2208 10.2855 22.3624 10.558 22.2809 10.8131L16.4628 29.2373C16.3978 29.4438 16.2058 29.5757 16.0002 29.5757Z"
+														fill="#13292F"
+													/>
+													<path
+														d="M16.0006 29.5757C15.795 29.5757 15.603 29.4438 15.538 29.2363L9.71984 10.8121C9.63935 10.5571 9.78093 10.2846 10.036 10.2041C10.292 10.1217 10.5635 10.2652 10.644 10.5202L16.4621 28.9445C16.5426 29.1995 16.401 29.472 16.146 29.5525C16.0985 29.5689 16.049 29.5757 16.0006 29.5757Z"
+														fill="#13292F"
+													/>
+													<path
+														d="M10.1826 11.1514C10.0042 11.1514 9.83349 11.0535 9.74815 10.8838L5.86937 3.12623C5.75009 2.88672 5.84706 2.59581 6.08658 2.47557C6.32706 2.35629 6.617 2.45326 6.73724 2.69278L10.616 10.4504C10.7363 10.6899 10.6383 10.9808 10.3988 11.101C10.33 11.135 10.2563 11.1514 10.1826 11.1514Z"
+														fill="#13292F"
+													/>
+													<path
+														d="M10.1813 11.1515C10.0805 11.1515 9.97866 11.1195 9.89139 11.0545C9.67709 10.8935 9.63345 10.59 9.79442 10.3757L15.6126 2.61815C15.7736 2.40384 16.0771 2.36118 16.2914 2.52118C16.5057 2.68215 16.5493 2.98566 16.3884 3.19996L10.5702 10.9575C10.4742 11.0846 10.3287 11.1515 10.1813 11.1515Z"
+														fill="#13292F"
+													/>
+													<path
+														d="M21.8188 11.1515C21.6714 11.1515 21.526 11.0846 21.431 10.9576L15.6128 3.19998C15.4518 2.98568 15.4954 2.68217 15.7097 2.5212C15.9231 2.35926 16.2276 2.40289 16.3885 2.61817L22.2067 10.3757C22.3677 10.59 22.3241 10.8936 22.1097 11.0545C22.0225 11.1205 21.9207 11.1515 21.8188 11.1515Z"
+														fill="#13292F"
+													/>
+													<path
+														d="M21.8184 11.1514C21.7457 11.1514 21.672 11.135 21.6022 11.1C21.3627 10.9798 21.2657 10.6889 21.385 10.4494L25.2638 2.6918C25.384 2.45229 25.674 2.35532 25.9144 2.47459C26.154 2.59483 26.2509 2.88574 26.1317 3.12526L22.2529 10.8828C22.1666 11.0535 21.9959 11.1514 21.8184 11.1514Z"
+														fill="#13292F"
+													/>
+												</svg>
+											</div>
+											<div class="head-block__features-text">
+												Материалы и компоненты высокого премиум-качества
+											</div>
+										</li>
+										<li class="head-block__features-item">
+											<div class="head-block__features-icon">
+												<svg
+													width="32"
+													height="32"
+													viewBox="0 0 32 32"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<g clip-path="url(#clip0_104_2142)">
+														<path
+															d="M16.0243 6.89734C11.4952 6.89734 7.79492 10.5976 7.79492 15.1268C7.79492 17.4949 8.831 19.7743 10.5775 21.3136C11.88 22.6161 11.7616 25.3987 11.732 25.4283C11.732 25.5763 11.7616 25.6947 11.88 25.8132C11.9688 25.902 12.1168 25.9612 12.2353 25.9612H19.7838C19.9318 25.9612 20.0502 25.902 20.139 25.8132C20.2279 25.7243 20.2871 25.5763 20.2871 25.4283C20.2871 25.3987 20.139 22.6161 21.4415 21.3136L21.5304 21.2248C23.2473 19.6559 24.2538 17.4357 24.2538 15.1268C24.2538 10.5976 20.5535 6.89734 16.0243 6.89734ZM20.7607 20.544C20.7311 20.5736 20.6719 20.6328 20.6719 20.6624C19.5174 21.9057 19.3102 23.9482 19.2806 24.9251H12.7385C12.7089 23.9482 12.5017 21.8169 11.2584 20.544C9.68946 19.1823 8.77179 17.1989 8.77179 15.0972C8.77179 11.1009 11.9984 7.87421 15.9947 7.87421C19.991 7.87421 23.2177 11.1009 23.2177 15.0972C23.2177 17.1989 22.3296 19.1823 20.7607 20.544Z"
+															fill="#13292F"
+														/>
+														<path
+															d="M15.9952 8.99907C15.7288 8.99907 15.492 9.23589 15.492 9.50231C15.492 9.76873 15.7288 10.0056 15.9952 10.0056C18.985 10.0056 21.3828 12.4329 21.3828 15.3932C21.3828 15.6596 21.6196 15.8964 21.886 15.8964C22.1525 15.8964 22.3893 15.6596 22.3893 15.3932C22.4189 11.8705 19.5475 8.99907 15.9952 8.99907ZM19.281 26.5236H12.7094C12.0285 26.5236 11.4661 27.086 11.4661 27.7669C11.4661 28.4477 12.0285 29.0102 12.7094 29.0102H19.2514C19.9619 28.9806 20.5243 28.4477 20.5243 27.7669C20.5243 27.086 19.9619 26.5236 19.281 26.5236ZM19.281 27.9741H12.7094C12.591 27.9741 12.4725 27.8853 12.4725 27.7373C12.4725 27.5893 12.5613 27.5005 12.7094 27.5005H19.2514C19.3699 27.5005 19.4883 27.5893 19.4883 27.7373C19.4883 27.8853 19.3995 27.9741 19.281 27.9741ZM18.3042 29.5134H13.6862C13.0054 29.5134 12.4429 30.0759 12.4429 30.7567C12.4429 31.4376 13.0054 32 13.6862 32H18.3042C18.985 32 19.5475 31.4376 19.5475 30.7567C19.5475 30.0463 18.985 29.5134 18.3042 29.5134ZM18.3042 30.9639H13.6862C13.5678 30.9639 13.4494 30.8751 13.4494 30.7271C13.4494 30.5791 13.5382 30.4903 13.6862 30.4903H18.3042C18.4226 30.4903 18.541 30.5791 18.541 30.7271C18.541 30.8751 18.4226 30.9639 18.3042 30.9639ZM15.9952 4.44033C16.2912 4.44033 16.4984 4.20352 16.4984 3.9371V0.503238C16.4984 0.236818 16.2616 0 15.9952 0C15.7288 0 15.492 0.236818 15.492 0.503238V3.9371C15.492 4.20352 15.7288 4.44033 15.9952 4.44033ZM24.3726 2.54579C24.1358 2.36818 23.8398 2.45698 23.6918 2.6642L21.7972 5.50601C21.6196 5.74283 21.6788 6.06846 21.9156 6.21647C22.0045 6.27567 22.0933 6.30527 22.1821 6.30527C22.3597 6.30527 22.5077 6.21647 22.5965 6.06846L24.491 3.22664C24.6687 3.01943 24.6094 2.6938 24.3726 2.54579ZM9.98595 6.18686C10.0748 6.18686 10.1636 6.15726 10.2524 6.09806C10.4892 5.95005 10.5484 5.62442 10.4004 5.3876L8.56505 2.51619C8.41704 2.27937 8.09141 2.22017 7.8546 2.36818C7.61778 2.51619 7.55857 2.84181 7.70658 3.07863L9.54192 5.95005C9.66033 6.12766 9.80834 6.18686 9.98595 6.18686ZM6.40409 9.3247L3.41426 7.69658C3.17744 7.57817 2.85182 7.66698 2.73341 7.90379C2.5854 8.14061 2.67421 8.46624 2.94063 8.58464L5.93045 10.2128C6.01926 10.2424 6.07846 10.272 6.16727 10.272C6.34488 10.272 6.5225 10.1832 6.6113 10.0056C6.72971 9.76873 6.6409 9.44311 6.40409 9.3247ZM29.2866 7.90379C29.1682 7.66698 28.8426 7.57817 28.6057 7.69658L25.5863 9.3247C25.3495 9.44311 25.2607 9.76873 25.3791 10.0056C25.4679 10.1832 25.6455 10.272 25.8231 10.272C25.9119 10.272 26.0008 10.2424 26.06 10.2128L29.0794 8.58464C29.3162 8.46624 29.405 8.14061 29.2866 7.90379Z"
+															fill="#13292F"
+														/>
+													</g>
+													<defs>
+														<clipPath id="clip0_104_2142">
+															<rect width="32" height="32" fill="white" />
+														</clipPath>
+													</defs>
+												</svg>
+											</div>
+											<div class="head-block__features-text">
+												Новейшие инновационные технологии
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="head-block__img"></div>
+					</div>
+				</div>
+			</section>
+			<section class="about" id="about">
+				<div class="container">
+					<div class="about__inner">
+						<div class="about__images">
+							<div class="about__img about__img--one"></div>
+							<div class="about__img about__img--two"></div>
+						</div>
+						<div class="about__text">
+							<h2 class="about__title">
+								<span class="about__title-inner">О нас</span
+								><span class="about__title-line"></span>
+							</h2>
+
+							<p class="about__descr">
+								<span>Самый яркий бренд декоративной косметики в России </span
+								>Мы - Лидеры в своей нише. Профессиональная косметика и кисти
+								для макияжа KLEPACH.PRO уже более 7 лет завоевывают доверие ТОП
+								- визажистов по всей России.
+							</p>
+							<a class="btn about__btn"
+								>Вступить в закрытый канал
+								<svg
+									width="32"
+									height="33"
+									viewBox="0 0 32 33"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M16 0.5C7.16344 0.5 0 7.66344 0 16.5C0 25.3366 7.16344 32.5 16 32.5C24.8366 32.5 32 25.3366 32 16.5C32 7.66344 24.8366 0.5 16 0.5ZM24.3162 10.621L21.4744 24.1875C21.4401 24.3516 21.365 24.5044 21.2561 24.6319C21.1473 24.7594 21.0081 24.8575 20.8515 24.9172C20.6948 24.9769 20.5257 24.9963 20.3596 24.9735C20.1935 24.9508 20.0357 24.8867 19.9009 24.7871L15.7674 21.7332L13.2631 24.0958C13.2303 24.1267 13.1917 24.1508 13.1495 24.1666C13.1074 24.1824 13.0624 24.1897 13.0174 24.188C12.9724 24.1863 12.9281 24.1756 12.8873 24.1566C12.8464 24.1376 12.8097 24.1107 12.7794 24.0774L12.7256 24.0182L13.1607 19.8073L21.0034 12.6416C21.0422 12.6062 21.0663 12.5576 21.071 12.5053C21.0757 12.453 21.0607 12.4009 21.0288 12.3592C20.9969 12.3175 20.9506 12.2892 20.8989 12.28C20.8472 12.2707 20.794 12.2812 20.7496 12.3093L10.7197 18.6574L6.4 17.2067C6.28514 17.1681 6.18504 17.0949 6.11342 16.9972C6.0418 16.8995 6.00218 16.7819 5.99998 16.6608C5.99779 16.5397 6.03314 16.4208 6.10118 16.3205C6.16922 16.2203 6.26661 16.1435 6.38 16.1008L23.2812 9.734C23.4116 9.68494 23.5528 9.6718 23.69 9.69596C23.8272 9.72012 23.9553 9.78069 24.0611 9.87134C24.1669 9.962 24.2464 10.0794 24.2912 10.2113C24.3361 10.3431 24.3447 10.4847 24.3162 10.621Z"
+										fill="#13292F"
+									/></svg
+							></a>
+							<a href="#" download class="about__download"
+								>Скачать презентацию.pdf</a
+							>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="product" id="product">
+				<div class="container">
+					<div class="product__inner">
+						<ul class="product__list">
+							<li class="product__item">
+								<a href="" class="product__link"
+									><div class="product__item-inner">
+										<div class="product__img">
+											<img src="/images/пигмент.png" alt="пигмент" />
+										</div>
+									</div>
+									<p class="product__text">Пигменты KLEPACH.PRO</p>
+								</a>
+							</li>
+							<li class="product__item">
+								<a href="" class="product__link"
+									><div class="product__item-inner">
+										<div class="product__img">
+											<img src="/images/кисти.png" alt="кисти" />
+										</div>
+									</div>
+									<p class="product__text">Кисти KLEPACH.PRO</p>
+								</a>
+							</li>
+							<li class="product__item">
+								<a href="" class="product__link"
+									><div class="product__item-inner">
+										<div class="product__img">
+											<img src="/images/Тинт.png" alt="Тинты " />
+										</div>
+									</div>
+									<p class="product__text">Тинты KLEPACH.PRO</p>
+								</a>
+							</li>
+							<li class="product__item">
+								<a href="" class="product__link"
+									><div class="product__item-inner">
+										<div class="product__img">
+											<img src="/images/хайлайтер.png" alt="Хайлайтер " />
+										</div>
+									</div>
+									<p class="product__text">Хайлайтер KLEPACH.PRO</p>
+								</a>
+							</li>
+							<li class="product__item">
+								<a href="" class="product__link"
+									><div class="product__item-inner">
+										<div class="product__img">
+											<img src="/images/праймер.png" alt="праймер" />
+										</div>
+									</div>
+									<p class="product__text">Праймер KLEPACH.PRO</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="collections" id="collections">
+				<div class="container">
+					<div class="collections__inner">
+						<div class="collections__text">
+							<h2 class="collections__title">
+								<span class="collections__title-inner">Коллекции</span
+								><span class="collections__title-line"></span>
+							</h2>
+							<ul class="collections__list">
+								<li class="collections__item">
+									<a href="" class="collections__link">Пигменты</a>
+								</li>
+								<li class="collections__item">
+									<a href="" class="collections__link"
+										>Пигменты ультрахамелеоны</a
+									>
+								</li>
+								<li class="collections__item">
+									<a href="" class="collections__link">Тинты</a>
+								</li>
+								<li class="collections__item">
+									<a href="" class="collections__link">Хайлайтеры</a>
+								</li>
+								<li class="collections__item">
+									<a href="" class="collections__link">Кисти</a>
+								</li>
+								<li class="collections__item">
+									<a href="" class="collections__link">Праймеры</a>
+								</li>
+							</ul>
+						</div>
+						<div class="collections__images">
+							<div class="collections__img collections__img--one">
+								<img src="/images/collections-one.jpg" alt="woman" />
+							</div>
+							<div class="collections__img collections__img--two">
+								<img src="/images/collections-two.jpg" alt="woman" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="advantages" id="advantages">
+				<div class="container">
+					<div class="advantages__inner">
+						<h2 class="advantages__title">
+							<span class="advantages__title-line"></span
+							><span class="advantages__title-inner"
+								>Преимущества работы с нами</span
+							><span class="advantages__title-line"></span>
+						</h2>
+						<ul class="advantages__list">
+							<li class="advantages__item">
+								<div class="advantages__img-wrapper">
+									<img
+										src="/images/box.svg"
+										alt="box"
+										class="advantages__icon"
+									/>
+								</div>
+								<h3 class="advantages__item-title">Собственное производство</h3>
+								<p class="advantages__discr">
+									Почти вся продукция изготавливается на собственном
+									производстве в России. Благодаря этому, мы можем предоставлять
+									более высокую скидку для наших дистрибьюторов
+								</p>
+							</li>
+							<li class="advantages__item">
+								<div class="advantages__img-wrapper">
+									<img
+										src="/images/megaphone.svg"
+										alt="megaphone"
+										class="advantages__icon"
+									/>
+								</div>
+								<h3 class="advantages__item-title">Маркетинговая поддержка</h3>
+								<p class="advantages__discr">
+									Поддержка при проведении beauty-мероприятий, персональное
+									обучение для менеджеров о преимуществах каждого продукта и
+									возможностях увеличения среднего чека
+								</p>
+							</li>
+							<li class="advantages__item">
+								<div class="advantages__img-wrapper">
+									<img
+										src="/images/notebook.svg"
+										alt="notebook"
+										class="advantages__icon"
+									/>
+								</div>
+								<h3 class="advantages__item-title">Контент</h3>
+								<p class="advantages__discr">
+									Предоставляем эксклюзивный контент для социальных сетей и
+									официального сайта: <br />
+									- Персональный менеджер <br />
+									- Обучение для продавцов
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="reviews">
+				<div class="container">
+					<div class="reviews__inner">
+						<div class="reviews__title-wrapper">
+							<h2 class="reviews__title">
+								<span class="reviews__title-inner">Отзывы</span>
+								<span class="reviews__title-line"></span>
+								<div class="controlls__wrapper">
+									<button
+										class="reviews__controlls reviews__controlls--prev"
+									></button>
+									<button
+										class="reviews__controlls reviews__controlls--next"
+									></button>
+								</div>
+							</h2>
+						</div>
+						<div class="reviews__item-wrapper">
+							<div class="reviews__item">
+								<div class="reviews__item-date">
+									<img
+										src="/images/reviews-photo.jpg"
+										alt="Магазин Beauty Expert"
+										class="reviews__item-img"
+									/>
+									<div class="reviews__item-info">
+										<h3 class="reviews__item-title">Магазин Beauty Expert</h3>
+										<p class="reviews__item-name">Алексей Попов</p>
+										<div class="reviews__item-rating">
+											<img src="/images/reviews-rating.svg" alt="звезда" /><img
+												src="/images/reviews-rating.svg"
+												alt="звезда"
+											/><img
+												src="/images/reviews-rating.svg"
+												alt="звезда"
+											/><img
+												src="/images/reviews-rating.svg"
+												alt="звезда"
+											/><img src="/images/reviews-rating.svg" alt="звезда" />
+										</div>
+										<p class="reviews__item-data">22.02.2024</p>
+									</div>
+								</div>
+								<div class="reviews__item-content">
+									<p class="reviews__text">
+										Использование продукта максимально простое, если знать пару
+										нюансов при работе с рассыпчатыми пигментами. Пигменты
+										позволяют экспериментировать. Нанесение на «голое» веко, на
+										тёмную подложку или базу — уже три абсолютно разных эффекта.
+										Абсолютно разные оттенки, которые дают абсолютно разные
+										финиши и эффекты, что позволяет где-то делать акценты,
+										где-то украшать весь макияж сразу и так далее.
+									</p>
+									<button class="reviews__video-btn">
+										<img src="/images/reviews-play-btn.svg" alt="Кнопка Play" />
+										Смотреть видеоотзыв
+									</button>
+								</div>
+							</div>
+							<div class="reviews__item">
+								<div class="reviews__item-date">
+									<img
+										src="/images/reviews-photo.jpg"
+										alt="Магазин Beauty Expert"
+										class="reviews__item-img"
+									/>
+									<div class="reviews__item-info">
+										<h3 class="reviews__item-title">Lorem, ipsum dolor.</h3>
+										<p class="reviews__item-name">Lorem, ipsum.</p>
+										<div class="reviews__item-rating">
+											<img src="/images/reviews-rating.svg" alt="звезда" /><img
+												src="/images/reviews-rating.svg"
+												alt="звезда"
+											/><img
+												src="/images/reviews-rating.svg"
+												alt="звезда"
+											/><img
+												src="/images/reviews-rating.svg"
+												alt="звезда"
+											/><img src="/images/reviews-rating.svg" alt="звезда" />
+										</div>
+										<p class="reviews__item-data">22.02.2024</p>
+									</div>
+								</div>
+								<div class="reviews__item-content">
+									<p class="reviews__text">
+										Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+										Suscipit quae, maxime corporis ex excepturi cumque
+										voluptatem unde error! Quod ut harum beatae veritatis nobis
+										dolorum natus velit voluptas? Iure accusamus quis nobis
+										iusto esse eligendi distinctio nam tempora laboriosam,
+										magnam dicta laudantium. Sapiente dolor nesciunt minima ut,
+										quae sed sit?
+									</p>
+									<button class="reviews__video-btn">
+										<img src="/images/reviews-play-btn.svg" alt="Кнопка Play" />
+										Смотреть видеоотзыв
+									</button>
+								</div>
+							</div>
+							<div class="reviews__item">
+								<div class="reviews__item-date">
+									<img
+										src="/images/reviews-photo.jpg"
+										alt="Магазин Beauty Expert"
+										class="reviews__item-img"
+									/>
+									<div class="reviews__item-info">
+										<h3 class="reviews__item-title">Lorem, ipsum dolor.</h3>
+										<p class="reviews__item-name">Lorem, ipsum.</p>
+										<div class="reviews__item-rating">
+											<img src="/images/reviews-rating.svg" alt="звезда" /><img
+												src="/images/reviews-rating.svg"
+												alt="звезда"
+											/><img
+												src="/images/reviews-rating.svg"
+												alt="звезда"
+											/><img
+												src="/images/reviews-rating.svg"
+												alt="звезда"
+											/><img src="/images/reviews-rating.svg" alt="звезда" />
+										</div>
+										<p class="reviews__item-data">22.02.2024</p>
+									</div>
+								</div>
+								<div class="reviews__item-content">
+									<p class="reviews__text">
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Sed, eum.
+									</p>
+									<!-- <button class="reviews__video-btn">
+										<img src="/images/reviews-play-btn.svg" alt="Кнопка Play" />
+										Смотреть видеоотзыв
+									</button> -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="achievements">
+				<div class="container">
+					<div class="achievements__inner">
+						<div class="achievements__content">
+							<h2 class="achievements__title">Почему KLEPACH.PRO?</h2>
+							<p class="achievements__text">
+								Самый яркий бренд декоративной косметики в России Мы - Лидеры в
+								своей нише. Профессиональная косметика и кисти для макияжа
+								KLEPACH.PRO уже более 7 лет завоевывают доверие ТОП - визажистов
+								по всей России.
+							</p>
+							<button class="btn achievements__btn">
+								Получить индивидуальное предложение
+							</button>
+						</div>
+						<ul class="achievements__list">
+							<li class="achievements__item">
+								<p class="achievements__item-head">
+									более <span class="achievements__item-head--strong">50</span>
+								</p>
+								<p class="achievements__item-descr">
+									партнёров в России, СНГ и Европе
+								</p>
+							</li>
+							<li class="achievements__item">
+								<p class="achievements__item-head">
+									<span class="achievements__item-head--strong">33+</span>
+								</p>
+								<p class="achievements__item-descr">
+									бестселлера, 200+ товарных позиций в постоянном ассортименте
+								</p>
+							</li>
+							<li class="achievements__item">
+								<p class="achievements__item-head">
+									до <span class="achievements__item-head--strong">65%</span>
+								</p>
+								<p class="achievements__item-descr">
+									скидка для дистрибьюторов
+								</p>
+							</li>
+							<li class="achievements__item">
+								<p class="achievements__item-head">
+									с <span class="achievements__item-head--strong">2016</span>
+								</p>
+								<p class="achievements__item-descr">года на рынке</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="partners" id="partners">
+				<div class="container">
+					<div class="partners__inner">
+						<h2 class="partners__title">
+							<span class="partners__title-line"></span
+							><span class="partners__title-inner">Мы представлены</span
+							><span class="partners__title-line"></span>
+						</h2>
+						<ul class="partners__list">
+							<li class="partners__item">
+								<a href="">
+									<img
+										src="/images/letual.png"
+										alt="Лэтуаль"
+										class="partners__img"
+									/>
+								</a>
+							</li>
+							<li class="partners__item">
+								<a href="#"
+									><img
+										src="/images/gold.png"
+										alt="Золотое Яблоко"
+										class="partners__img"
+								/></a>
+							</li>
+							<li class="partners__item">
+								<a href="#"
+									><img
+										src="/images/market.png"
+										alt="Бессовестно Талантливый"
+										class="partners__img"
+								/></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<footer class="footer">
+				<div class="footer__container">
+					<div class="logo footer__logo">
+						<a href="index.html">
+							<img src="/images/logo.svg" alt="Лого" />
+						</a>
+					</div>
+					<nav class="footer__nav">
+						<ul class="footer__nav-list">
+							<li class="footer__nav-item"><a href="#about">О нас</a></li>
+							<li class="footer__nav-item"><a href="#partners">Партнеры</a></li>
+							<li class="footer__nav-item">
+								<a href="#collections">Коллекции</a>
+							</li>
+							<li class="footer__nav-item">
+								<a href="#advantages">Преимущества</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="footer__contacts">
+						<ul class="footer__contacts-list">
+							<li class="footer__contacts-item">
+								<a href="mailto:opt@klepachpro.ru"
+									><img
+										src="/images/mail.svg"
+										alt="Почта"
+									/>opt@klepachpro.ru</a
+								>
+							</li>
+							<li class="footer__contacts-item">
+								<a href="tel:+7 (938) 463 97 02"
+									><img src="/images/tel.svg" alt="Телефон" />+7 (938) 463 97
+									02</a
+								>
+							</li>
+							<li class="footer__contacts-item">
+								<a href="https://yandex.ru/maps/-/CDFkjB5d" target="_blank"
+									><img src="/images/map.svg" alt="Карта" />г. Сочи, ул.
+									Горького, д. 26</a
+								>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__social">
+						<a href="" class="footer__social-link"
+							><img src="/images/whatsapp.svg" alt="whatsapp"
+						/></a>
+						<a href="" class="footer__social-link"
+							><img src="/images/telegram.svg" alt="telegram"
+						/></a>
+					</div>
+					<div class="footer__copy">
+						<p class="footer__copy-text">
+							© 2016- 2024, KLEPACH PRO. Все права защищены
+						</p>
+						<div class="footer__documents">
+							<a href="#">Политика конфиденциальности</a>
+							<a href="#">Пользовательское соглашение</a>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</main>
+		<script defer src="/script.js"></script>
+	</body>
+</html>
