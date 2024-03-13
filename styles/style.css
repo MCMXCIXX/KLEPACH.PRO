@@ -765,6 +765,12 @@ button {
 
 .reviews__controlls {
   background-repeat: no-repeat;
+  font-size: 0;
+}
+
+.reviews__controlls svg {
+  position: relative;
+  z-index: -1;
 }
 
 .footer__container {
