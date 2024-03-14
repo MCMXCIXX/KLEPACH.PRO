@@ -369,6 +369,9 @@
 		width: 343px;
 		height: 343px;
 	}
+	.product::after {
+		display: none;
+	}
 	.collections {
 		margin-bottom: 100px;
 	}
@@ -415,12 +418,18 @@
 	.partners__list {
 		gap: 8px;
 	}
+	.partners {
+		margin-bottom: 90px;
+	}
 	.partners__inner {
 		margin-bottom: 100px;
 	}
 	.footer__container {
 		flex-direction: column;
-		gap: 40px;
+		gap: 16px;
+	}
+	.footer {
+		padding-top: 27px;
 	}
 	.footer__logo img {
 		width: 343px;
@@ -432,6 +441,17 @@
 	.footer__copy {
 		flex-direction: column;
 		gap: 10px;
+		font-size: 12px;
+		margin: 38px 0 37px 0;
+	}
+	.footer__contacts {
+		display: flex;
+		justify-content: start;
+		flex-grow: 0;
+	}
+	.footer__social-link img {
+		width: 30px;
+		height: 30px;
 	}
 	.modal__title {
 		font-size: 24px;
@@ -470,5 +490,18 @@
 	.modal__video-btn {
 		right: 16px;
 		top: 24px;
+	}
+	.reviews::after {
+		right: -200px;
+		top: 300px;
+	}
+	.reviews__inner {
+		min-height: 446px;
+	}
+	.advantages {
+		margin-bottom: 32px;
+	}
+	.about {
+		padding-bottom: 101px;
 	}
 }

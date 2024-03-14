@@ -47,6 +47,7 @@ html {
 main {
   max-width: 1920px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 body {
@@ -169,11 +170,11 @@ button {
   font-weight: 600;
   text-transform: uppercase;
   margin-top: 64px;
-  transition: transform 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .btn:hover {
-  transform: scale(1.04);
+  opacity: 0.8;
 }
 
 .head-block__features {
@@ -233,13 +234,27 @@ button {
   position: relative;
 }
 
+.about::before {
+  content: "";
+  display: flex;
+  height: 1480px;
+  width: 1471px;
+  position: absolute;
+  background-image: url(../images/about-bg2.svg);
+  background-position: center right;
+  background-repeat: no-repeat;
+  top: -250px;
+  right: 0;
+  z-index: -2;
+}
+
 .about::after {
   content: "";
   position: absolute;
   width: 100%;
   height: 1500px;
   top: -250px;
-  z-index: -11;
+  z-index: -1;
   background-image: url(../images/about-bg.png);
   background-repeat: no-repeat;
   background-position: 9% 0;
@@ -325,7 +340,21 @@ button {
 }
 
 .product {
+  position: relative;
   margin-bottom: 180px;
+}
+
+.product::after {
+  content: "";
+  display: flex;
+  width: 2765px;
+  height: 2768px;
+  background-image: url(../images/main-bg.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: -300px;
+  z-index: -11;
 }
 
 .product__list {
@@ -357,7 +386,21 @@ button {
 }
 
 .collections {
+  position: relative;
   margin-bottom: 260px;
+}
+
+.collections::after {
+  content: "";
+  display: flex;
+  height: 1500px;
+  width: 1300px;
+  background-image: url(../images/collections-bg.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -220px;
+  left: -115px;
+  z-index: -1;
 }
 
 .collections__inner {
@@ -521,7 +564,35 @@ button {
 }
 
 .reviews {
+  position: relative;
   margin-bottom: 228px;
+}
+
+.reviews::after,
+.reviews::before {
+  content: "";
+  display: flex;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -1;
+}
+
+.reviews::after {
+  background-position: right top;
+  height: 1700px;
+  width: 1600px;
+  background-image: url(../images/reviews-bg2.svg);
+  right: 0;
+  top: -350px;
+}
+
+.reviews::before {
+  background-position: left top;
+  height: 1200px;
+  width: 1200px;
+  background-image: url(../images/reviews-bg1.svg);
+  left: -100px;
+  top: -550px;
 }
 
 .reviews__inner {
@@ -589,6 +660,7 @@ button {
 
 .reviews__item.active {
   opacity: 1;
+  z-index: 11;
 }
 
 .reviews__item-date {
@@ -718,6 +790,8 @@ button {
   display: flex;
   align-items: center;
   margin-bottom: 60px;
+  text-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .partners__title-inner {
@@ -773,6 +847,12 @@ button {
   z-index: -1;
 }
 
+.footer {
+  padding-top: 54px;
+  border-top: 1px solid #eee;
+  background: #f9f9f9;
+}
+
 .footer__container {
   max-width: 1270px;
   margin: 0 auto;
@@ -784,7 +864,11 @@ button {
 }
 
 .footer__logo {
-  margin-top: -10px;
+  margin-top: -30px;
+}
+
+.footer__logo img {
+  width: 366px;
 }
 
 .footer__nav-list {
@@ -796,6 +880,12 @@ button {
 .footer__nav-item {
   font-weight: 400;
   font-size: 18px;
+}
+
+.footer__contacts {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
 }
 
 .footer__contacts-list {
@@ -822,7 +912,9 @@ button {
   color: #989898;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 37px;
+  margin: 107px 0 37px 0;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 .footer__copy-text {
@@ -833,6 +925,7 @@ button {
   text-decoration: underline;
   display: flex;
   gap: 43px;
+  margin-right: 49px;
 }
 
 .modal__video {
@@ -1339,6 +1432,9 @@ video {
     width: 343px;
     height: 343px;
   }
+  .product::after {
+    display: none;
+  }
   .collections {
     margin-bottom: 100px;
   }
@@ -1385,12 +1481,18 @@ video {
   .partners__list {
     gap: 8px;
   }
+  .partners {
+    margin-bottom: 90px;
+  }
   .partners__inner {
     margin-bottom: 100px;
   }
   .footer__container {
     flex-direction: column;
-    gap: 40px;
+    gap: 16px;
+  }
+  .footer {
+    padding-top: 27px;
   }
   .footer__logo img {
     width: 343px;
@@ -1402,6 +1504,17 @@ video {
   .footer__copy {
     flex-direction: column;
     gap: 10px;
+    font-size: 12px;
+    margin: 38px 0 37px 0;
+  }
+  .footer__contacts {
+    display: flex;
+    justify-content: start;
+    flex-grow: 0;
+  }
+  .footer__social-link img {
+    width: 30px;
+    height: 30px;
   }
   .modal__title {
     font-size: 24px;
@@ -1440,5 +1553,18 @@ video {
   .modal__video-btn {
     right: 16px;
     top: 24px;
+  }
+  .reviews::after {
+    right: -200px;
+    top: 300px;
+  }
+  .reviews__inner {
+    min-height: 446px;
+  }
+  .advantages {
+    margin-bottom: 32px;
+  }
+  .about {
+    padding-bottom: 101px;
   }
 }/*# sourceMappingURL=style.css.map */
