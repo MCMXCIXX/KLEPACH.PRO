@@ -170,11 +170,11 @@ button {
   font-weight: 600;
   text-transform: uppercase;
   margin-top: 64px;
-  transition: opacity 0.3s ease;
 }
 
 .btn:hover {
-  opacity: 0.8;
+  box-shadow: 0 4px 20px 0 rgba(91, 61, 99, 0.7), inset 2px 2px 16px 0 #a260a9;
+  background: linear-gradient(84deg, #3cd2ce 0%, #bebbf9 63.64%, #ffa5d4 100%);
 }
 
 .head-block__features {
@@ -588,7 +588,7 @@ button {
 
 .reviews::before {
   background-position: left top;
-  height: 1200px;
+  height: 1500px;
   width: 1200px;
   background-image: url(../images/reviews-bg1.svg);
   left: -100px;
@@ -1566,5 +1566,44 @@ video {
   }
   .about {
     padding-bottom: 101px;
+  }
+  .about::before {
+    background-size: contain;
+    top: 200px;
+    background-position: top right;
+    z-index: -1;
+    width: 670px;
+    height: 600px;
+  }
+  .about::after {
+    background-size: cover;
+    z-index: -2;
+    height: 500px;
+    left: -35px;
+    top: -120px;
+    width: 500px;
+    background-position: left center;
+  }
+  .collections::after {
+    top: -400px;
+  }
+  .reviews::before {
+    background-position: left bottom;
+    height: 1700px;
+    width: 1200px;
+    background-image: url(../images/reviews-bg1.svg);
+    left: -100px;
+    top: -550px;
+    z-index: -1;
+    background-size: cover;
+  }
+  .reviews::after {
+    z-index: -2;
+    height: 1350px;
+    width: 1200px;
+    background-size: cover;
+  }
+  .head-block {
+    background-position: -150px 0;
   }
 }/*# sourceMappingURL=style.css.map */

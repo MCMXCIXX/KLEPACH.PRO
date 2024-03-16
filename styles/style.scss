@@ -122,10 +122,10 @@ button {
 	font-weight: 600;
 	text-transform: uppercase;
 	margin-top: 64px;
-	transition: opacity 0.3s ease;
 }
 .btn:hover {
-	opacity: 0.8;
+	box-shadow: 0 4px 20px 0 rgba(91, 61, 99, 0.7), inset 2px 2px 16px 0 #a260a9;
+	background: linear-gradient(84deg, #3cd2ce 0%, #bebbf9 63.64%, #ffa5d4 100%);
 }
 .head-block__features {
 	max-width: 695px;
@@ -490,7 +490,7 @@ button {
 }
 .reviews::before {
 	background-position: left top;
-	height: 1200px;
+	height: 1500px;
 	width: 1200px;
 	background-image: url(../images/reviews-bg1.svg);
 	left: -100px;

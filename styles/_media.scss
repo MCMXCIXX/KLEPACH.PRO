@@ -504,4 +504,43 @@
 	.about {
 		padding-bottom: 101px;
 	}
+	.about::before {
+		background-size: contain;
+		top: 200px;
+		background-position: top right;
+		z-index: -1;
+		width: 670px;
+		height: 600px;
+	}
+	.about::after {
+		background-size: cover;
+		z-index: -2;
+		height: 500px;
+		left: -35px;
+		top: -120px;
+		width: 500px;
+		background-position: left center;
+	}
+	.collections::after {
+		top: -400px;
+	}
+	.reviews::before {
+		background-position: left bottom;
+		height: 1700px;
+		width: 1200px;
+		background-image: url(../images/reviews-bg1.svg);
+		left: -100px;
+		top: -550px;
+		z-index: -1;
+		background-size: cover;
+	}
+	.reviews::after {
+		z-index: -2;
+		height: 1350px;
+		width: 1200px;
+		background-size: cover;
+	}
+	.head-block {
+		background-position: -150px 0;
+	}
 }
